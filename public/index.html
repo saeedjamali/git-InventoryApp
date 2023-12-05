@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="build/style.css" />
+  <title>سامانه انبارداری</title>
+  <script src="https://cdn.jsdelivr.net/npm/jdate.js"></script>
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+  <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->
+  <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+</head>
+
+<body>
+  <div class="bg-slate-800 h-full pb-4">
+    <div class="bg-slate-600 text-white p-4 items-center text-center">
+      برنامه انبارداری (Tailwind & Js)
+
+      <span
+        class="h-8 px-2 py-1 text-sm font-medium bg-slate-500 rounded-full absolute flex items-center justify-center text-center ring-1 ring-blue-300 ring-2">کالای
+        موجود در سبد : 8</span>
+    </div>
+
+    <div class="grid grid-cols-6 gap-4  mt-4 h-auto">
+      <div class="col-span-6 md:col-span-2 mx-4 mt-4">
+        <section class="container max-w-md rounded-md bg-white mx-auto mt- space-y-4 p-4 bg-gray-200">
+          <span
+            class=" font-normal text-slate-800 w-full block font-normal bg-slate-300 py-2 px-4 rounded-md cursor-pointer">محصول
+            جدید</span>
+          <form class="space-y-4">
+            <div class="flex flex-col space-y-4 m-4 ">
+              <div>
+                <label for="first_name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">عنوان</label>
+                <input type="text" id="first_name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  font-medium block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="صندلی" required>
+              </div>
+              <div>
+                <label for="first_name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">تعداد</label>
+                <input type="number" id="first_name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  font-medium block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="12" required>
+              </div>
+              <div class="my-4">
+
+                <div class="relative my-4 inline-block">
+                  <button
+                    class="category__btn flex items-center whitespace-nowrap bg-slate-400 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                    type="button" id="dropdownMenuButton1" data-te-dropdown-toggle-ref aria-expanded="false"
+                    data-te-ripple-init data-te-ripple-color="light">
+                    دسته بندی محصول
+                    <span class="ml-2 w-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </button>
+                  <ul
+                    class="category__items hidden absolute z-[1000] float-left m-0  mt-1 w-full list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-ri' text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                    aria-labelledby="dropdownMenuButton1" data-te-dropdown-menu-ref>
+                    <li>
+                      <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#" data-te-dropdown-item-ref>دسته بندی 1</a>
+                    </li>
+                    <li>
+                      <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#" data-te-dropdown-item-ref>دسته بندی 2</a>
+                    </li>
+                    <li>
+                      <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#" data-te-dropdown-item-ref>دسته بندی 3</a>
+                    </li>
+                  </ul>
+                </div>
+
+
+
+
+              </div>
+
+              <button class="font-medium text-sm bg-gray-700 py-2 rounded-md text-white">افزودن محصول جدید</button>
+
+          </form>
+
+        </section>
+        <section class="main container max-w-md rounded-md bg-white mx-auto space-y-4 p-4 bg-gray-200 mt-2">
+          <span
+            class="category__new font-normal text-slate-800 w-full block font-normal bg-slate-300 py-2 px-4 rounded-md cursor-pointer">دسته
+            بندی جدید</span>
+          <form class="category__form hidden">
+            <div class="flex flex-col space-y-4 m-4 ">
+              <div>
+                <label for="first_name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">عنوان</label>
+                <input type="text" id="first_name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  font-medium block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="لوازم اداری" required>
+              </div>
+              <div class="">
+
+                <label for="message"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">توضیحات</label>
+                <textarea id="message" rows="4"
+                  class="block p-2.5 w-full text-sm text-gray-900 font-medium bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="دسته بندی ایجاد شده ..."></textarea>
+
+              </div>
+
+              <button class="font-medium text-sm bg-gray-700 py-2 rounded-md text-white">افزودن دسته بندی جدید</button>
+
+          </form>
+
+        </section>
+
+      </div>
+      <div class="col-span-6 md:col-span-4 row-span-2 bg-slate-100 rounded-md mx-4">
+        <span class="block p-4 font-normal bg-slate-300  ">لیست محصولات</span>
+        <div class="flex items-center justify-between mx-4">
+          <div class="flex-1 w-full">
+            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white ">جستجو</label>
+            <input type="text" id="first_name"
+              class="bg-gray-50 w-3/4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  font-medium block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="صندلی" required>
+          </div>
+          <div class="my-4 flex-1">
+            <label for="product__filter" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">مرتب
+              سازی</label>
+            <div class="relative my-2 inline-block">
+              <button id=""
+                class="category__btn flex items-center whitespace-nowrap bg-slate-400 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                type="button" id="dropdownMenuButton1" data-te-dropdown-toggle-ref aria-expanded="false"
+                data-te-ripple-init data-te-ripple-color="light">
+                دسته بندی محصول
+                <span class="ml-2 w-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                    <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <ul
+                class="category__items hidden absolute z-[1000] float-left m-0  mt-1 w-full list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-ri' text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                aria-labelledby="dropdownMenuButton1" data-te-dropdown-menu-ref>
+                <li>
+                  <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                    href="#" data-te-dropdown-item-ref>دسته بندی 1</a>
+                </li>
+                <li>
+                  <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                    href="#" data-te-dropdown-item-ref>دسته بندی 2</a>
+                </li>
+                <li>
+                  <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                    href="#" data-te-dropdown-item-ref>دسته بندی 3</a>
+                </li>
+              </ul>
+            </div>
+
+
+
+
+          </div>
+        </div>
+        <div class="m-4 px-4">
+          <div class="product flex items-center justify-between border p-2 border-slate-400 mt-2">
+            <div class="flex flex-1">
+              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
+            </div>
+            <span class="w-12 h-12 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4">10</span>
+            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
+          </div>
+          <div class="product flex items-center justify-between border p-2 border-slate-400 mt-2">
+            <div class="flex flex-1">
+              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
+            </div>
+            <span class="w-12 h-12 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4">10</span>
+            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
+          </div>
+          <div class="product flex items-center justify-between border p-2 border-slate-400 mt-2">
+            <div class="flex flex-1">
+              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
+            </div>
+            <span class="w-12 h-12 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4">10</span>
+            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
+          </div>
+          <div class="product flex items-center justify-between border p-2 border-slate-400 mt-2">
+            <div class="flex flex-1">
+              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
+            </div>
+            <span class="w-12 h-12 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4">10</span>
+            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
+          </div>
+          <div class="product flex items-center justify-between border p-2 border-slate-400 mt-2">
+            <div class="flex flex-1">
+              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
+            </div>
+            <span class="w-12 h-12 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4">10</span>
+            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
+          </div>
+          <div class="product flex items-center justify-between border p-2 border-slate-400 mt-2">
+            <div class="flex flex-1">
+              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
+            </div>
+            <span class="w-12 h-12 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4">10</span>
+            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/src/js/app.js"></script>
+</body>
+
+</html>
