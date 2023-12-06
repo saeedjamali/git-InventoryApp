@@ -10,3 +10,6 @@ const categoryForm = document.querySelector(".category__form");
 categoryNew.addEventListener("click",()=>{
     categoryForm.classList.toggle("hidden");
 });
+
+
+
