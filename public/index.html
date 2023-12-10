@@ -12,8 +12,8 @@
   <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 </head>
 
-<body>
-  <div class="bg-slate-800 h-full pb-4">
+<body class="bg-slate-800">
+  <div class="bg-slate-800 h-full pb-4 min-h-full">
     <div class="bg-slate-600 text-white p-4 items-center text-center">
       برنامه انبارداری (Tailwind & Js)
 
@@ -95,23 +95,23 @@
           <form class="category__form hidden">
             <div class="flex flex-col space-y-4 m-4 ">
               <div>
-                <label for="first_name"
+                <label for="category__title"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">عنوان</label>
-                <input type="text" id="first_name"
+                <input type="text" id="category__title"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  font-medium block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="لوازم اداری" required>
               </div>
               <div class="">
 
-                <label for="message"
+                <label for="category__description"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">توضیحات</label>
-                <textarea id="message" rows="4"
+                <textarea id="category__description" rows="4"
                   class="block p-2.5 w-full text-sm text-gray-900 font-medium bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="دسته بندی ایجاد شده ..."></textarea>
 
               </div>
 
-              <button class="font-medium text-sm bg-gray-700 py-2 rounded-md text-white">افزودن دسته بندی جدید</button>
+              <button id="category__new" class="font-medium text-sm bg-gray-700 py-2 rounded-md text-white">افزودن دسته بندی جدید</button>
 
           </form>
 
@@ -168,49 +168,91 @@
           </div>
         </div>
         <div class="m-4 px-4 font-medium text-sm lg:text-base">
-          <div class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
+          <div
+            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
             <div class="flex flex-1">
               <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
               <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
               <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
             </div>
-            <span class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
+            <span
+              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
             <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
           </div>
 
-          <div class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
+          <div
+            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
             <div class="flex flex-1">
               <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
               <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
               <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
             </div>
-            <span class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
+            <span
+              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
             <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
           </div>
 
-          <div class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
+          <div
+            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
             <div class="flex flex-1">
               <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
               <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
               <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
             </div>
-            <span class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
+            <span
+              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
             <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
           </div>
 
-          <div class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
+          <div
+            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
             <div class="flex flex-1">
               <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
               <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
               <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
             </div>
-            <span class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
+            <span
+              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
             <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
           </div>
-          
-         
-        
-          
+
+          <div
+            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
+            <div class="flex flex-1">
+              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
+            </div>
+            <span
+              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
+            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
+          </div>
+
+          <div
+            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
+            <div class="flex flex-1">
+              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
+            </div>
+            <span
+              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
+            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
+          </div>
+
+          <div
+            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
+            <div class="flex flex-1">
+              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
+              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
+            </div>
+            <span
+              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
+            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
+          </div>
+
+
         </div>
       </div>
     </div>
