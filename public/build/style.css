@@ -2400,6 +2400,10 @@ video {
   padding: auto
 }
 
+.p-8 {
+  padding: 2rem
+}
+
 .\!py-0 {
   padding-top: 0px !important;
   padding-bottom: 0px !important

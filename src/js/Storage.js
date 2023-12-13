@@ -32,6 +32,7 @@ export default class Storage {
             existedItem.title = categoryToSave.title;
             existedItem.description = categoryToSave.description;
         } else {
+            
             categoryToSave.id = new Date().getTime();
             categoryToSave.createAt = new Date().toISOString();
             saveCategories.push(categoryToSave);

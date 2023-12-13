@@ -7,9 +7,8 @@
   <link rel="stylesheet" href="build/style.css" />
   <title>سامانه انبارداری</title>
   <script src="https://cdn.jsdelivr.net/npm/jdate.js"></script>
-  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+
   <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->
-  <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 </head>
 
 <body class="bg-slate-800">
@@ -33,49 +32,29 @@
               <div>
                 <label for="first_name"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">عنوان</label>
-                <input type="text" id="first_name"
+                <input type="text" id="product__title"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  font-medium block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="صندلی" required>
               </div>
               <div>
                 <label for="first_name"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">تعداد</label>
-                <input type="number" id="first_name"
+                <input type="number" id="product__quantity"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  font-medium block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="12" required>
               </div>
               <div class="my-4">
 
                 <div class="relative my-4 inline-block">
-                  <button
-                    class="category__btn flex items-center whitespace-nowrap bg-slate-400 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                    type="button" id="dropdownMenuButton1" data-te-dropdown-toggle-ref aria-expanded="false"
-                    data-te-ripple-init data-te-ripple-color="light">
-                    دسته بندی محصول
-                    <span class="ml-2 w-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                        <path fill-rule="evenodd"
-                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                          clip-rule="evenodd" />
-                      </svg>
-                    </span>
-                  </button>
-                  <ul
-                    class="category__items hidden absolute z-[1000] float-left m-0  mt-1 w-full list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-ri' text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
-                    aria-labelledby="dropdownMenuButton1" data-te-dropdown-menu-ref>
-                    <li>
-                      <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                        href="#" data-te-dropdown-item-ref>دسته بندی 1</a>
-                    </li>
-                    <li>
-                      <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                        href="#" data-te-dropdown-item-ref>دسته بندی 2</a>
-                    </li>
-                    <li>
-                      <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                        href="#" data-te-dropdown-item-ref>دسته بندی 3</a>
-                    </li>
-                  </ul>
+                  
+                  <select id="category__items"
+                    class=" flex items-center whitespace-nowrap bg-slate-400 rounded bg-primary px-4 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none ">
+                    <option selected>دسته بندی محصولات</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                  </select>
                 </div>
 
 
@@ -83,7 +62,8 @@
 
               </div>
 
-              <button class="font-medium text-sm bg-gray-700 py-2 rounded-md text-white">افزودن محصول جدید</button>
+              <button id="product__new" class="font-medium text-sm bg-gray-700 py-2 rounded-md text-white">افزودن محصول
+                جدید</button>
 
           </form>
 
@@ -111,7 +91,8 @@
 
               </div>
 
-              <button id="category__new" class="font-medium text-sm bg-gray-700 py-2 rounded-md text-white">افزودن دسته بندی جدید</button>
+              <button id="category__new" class="font-medium text-sm bg-gray-700 py-2 rounded-md text-white">افزودن دسته
+                بندی جدید</button>
 
           </form>
 
