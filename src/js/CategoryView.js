@@ -9,6 +9,7 @@ const categoryNew = document.querySelector("#category__new");
 
 
 
+
 class CategoryView {
 
     constructor() {
@@ -39,13 +40,11 @@ class CategoryView {
         let categoriesList = "";
 
         this.categories.forEach((c) => {
-            categoriesList += ` <li>
-            <a data-id=${c.id} class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-              href="#" data-te-dropdown-item-ref>${c.title}</a>
-          </li>`;
+            categoriesList +=`<option class ="text-sm py-2 font-medium bg-slate-400" value=${c.id}>${c.title}</option>`;
+
 
         });
-        const categoryItems = document.querySelector(".category__items");
+        const categoryItems= document.querySelector("#category__items");
         categoryItems.innerHTML = categoriesList;
     }
 

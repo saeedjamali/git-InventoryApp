@@ -10,6 +10,15 @@ categoryBtn.addEventListener("click", () => {
 });
 
 
+
+const productNew = document.querySelector(".product__new");
+const productForm = document.querySelector(".product__form");
+productNew.addEventListener("click", () => {
+    productForm.classList.toggle("hidden");
+});
+
+
+
 const categoryNew = document.querySelector(".category__new");
 const categoryForm = document.querySelector(".category__form");
 categoryNew.addEventListener("click", () => {
@@ -23,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     CategoryView.setCategory();
     CategoryView.createCategoriesList();
     ProductView.setProduct();
+    console.log(ProductView);
+    ProductView.createProductList();
 });
 
 

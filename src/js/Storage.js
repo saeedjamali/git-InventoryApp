@@ -1,8 +1,8 @@
 const products = [
-    { id: 1, title: "JavaScript", description: "Node and Js",quantity:1, category: "front", createAt: "2022-10-11" },
-    { id: 2, title: "JavaScript", description: "Node and Js",quantity:1, category: "front", createAt: "2022-10-11" },
-    { id: 3, title: "JavaScript", description: "Node and Js",quantity:1, category: "front", createAt: "2022-10-11" },
-    { id: 4, title: "JavaScript", description: "Node and Js",quantity:1, category: "front", createAt: "2022-10-11" },
+    { id: 1, title: "JavaScript", description: "Node and Js", quantity: 1, category: "front", createAt: "2022-10-11" },
+    { id: 2, title: "JavaScript", description: "Node and Js", quantity: 1, category: "front", createAt: "2022-10-11" },
+    { id: 3, title: "JavaScript", description: "Node and Js", quantity: 1, category: "front", createAt: "2022-10-11" },
+    { id: 4, title: "JavaScript", description: "Node and Js", quantity: 1, category: "front", createAt: "2022-10-11" },
 ];
 
 
@@ -21,7 +21,7 @@ export default class Storage {
 
     static getAllCategories() {
         const saveCategories = JSON.parse(localStorage.getItem("category")) || [];
-        const sortedCategories = saveCategories.sort((a, b) => a.id > b.id);
+        const sortedCategories = saveCategories.sort((a, b) => { return a.id > b.id ? -1 : 1 });
         return sortedCategories;
     }
 
@@ -32,35 +32,37 @@ export default class Storage {
             existedItem.title = categoryToSave.title;
             existedItem.description = categoryToSave.description;
         } else {
-            
+
             categoryToSave.id = new Date().getTime();
-            categoryToSave.createAt = new Date().toISOString();
+            categoryToSave.createAt = new Date().echoFa();
             saveCategories.push(categoryToSave);
         }
         localStorage.setItem("category", JSON.stringify(saveCategories));
 
     }
 
-    static getAllProducts(){
-        const saveProducts = JSON.parse(localStorage.getItem("product"))|| [];
-        const sortedProducts = saveProducts.sort((a, b) => a.id > b.id);
+    static getAllProducts() {
+        const saveProducts = JSON.parse(localStorage.getItem("product")) || [];
+        const sortedProducts = saveProducts.sort((a, b) => { return a.id > b.id ? -1 : 1 });
         return sortedProducts;
     }
 
-    static saveProducts(productToSave){
+    static saveProducts(productToSave) {
         const saveProducts = Storage.getAllProducts("product");
-        const existedProduct = saveProducts.find((p)=>p.id==productToSave.id)
+        console.log(saveProducts);
+        const existedProduct = saveProducts.find((p) => p.id == productToSave.id)
         if (existedProduct) {
             existedProduct.title = productToSave.title;
             existedProduct.description = productToSave.description;
-            existedProduct.category = productToSave.description;
+            existedProduct.category = productToSave.category;
             existedProduct.quantity = productToSave.quantity;
         } else {
             productToSave.id = new Date().getTime();
-            productToSave.createAt = new Date().toISOString();
+            productToSave.createAt = new Date().echoFa();
+            saveProducts.push(productToSave);
         }
-        localStorage.setItem("category", JSON.stringify(productToSave));
+        localStorage.setItem("product", JSON.stringify(saveProducts));
 
-    
+
     }
 }

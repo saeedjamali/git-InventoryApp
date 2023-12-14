@@ -25,9 +25,9 @@
       <div class="col-span-6 md:col-span-2 mx-4 mt-4">
         <section class="container rounded-md bg-white mx-auto space-y-4 p-4 bg-gray-200">
           <span
-            class=" font-normal text-slate-800 w-full block font-normal bg-slate-300 py-2 px-4 rounded-md cursor-pointer">محصول
+            class="product__new font-normal text-slate-800 w-full block font-normal bg-slate-300 py-2 px-4 rounded-md cursor-pointer">محصول
             جدید</span>
-          <form class="space-y-4">
+          <form class="product__form space-y-4">
             <div class="flex flex-col space-y-4 m-4 ">
               <div>
                 <label for="first_name"
@@ -45,15 +45,12 @@
               </div>
               <div class="my-4">
 
-                <div class="relative my-4 inline-block">
+                <div class="my-4 inline-block w-full">
                   
                   <select id="category__items"
-                    class=" flex items-center whitespace-nowrap bg-slate-400 rounded bg-primary px-4 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none ">
-                    <option selected>دسته بندی محصولات</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
+                    class="lg:w-1/2 w-full pl-4 flex items-center whitespace-nowrap bg-slate-400 rounded bg-slate-400  px-3 pb-2 pt-2 text-sm font-medium  leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]  motion-reduce:transition-none ">
+                    <option class ="text-sm  font-medium bg-slate-400 py-2" selected>دسته بندی محصولات</option>
+                 
                   </select>
                 </div>
 
@@ -62,7 +59,7 @@
 
               </div>
 
-              <button id="product__new" class="font-medium text-sm bg-gray-700 py-2 rounded-md text-white">افزودن محصول
+              <button id="product__add" class="font-medium text-sm bg-gray-700 py-2 rounded-md text-white">افزودن محصول
                 جدید</button>
 
           </form>
@@ -148,8 +145,8 @@
 
           </div>
         </div>
-        <div class="m-4 px-4 font-medium text-sm lg:text-base">
-          <div
+        <div id="product__list" class="m-4 px-4 font-medium text-sm lg:text-base">
+          <!-- <div
             class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
             <div class="flex flex-1">
               <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
@@ -159,79 +156,11 @@
             <span
               class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
             <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
-          </div>
+          </div> -->
 
-          <div
-            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
-            <div class="flex flex-1">
-              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
-            </div>
-            <span
-              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
-            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
-          </div>
+         
 
-          <div
-            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
-            <div class="flex flex-1">
-              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
-            </div>
-            <span
-              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
-            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
-          </div>
-
-          <div
-            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
-            <div class="flex flex-1">
-              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
-            </div>
-            <span
-              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
-            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
-          </div>
-
-          <div
-            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
-            <div class="flex flex-1">
-              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
-            </div>
-            <span
-              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
-            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
-          </div>
-
-          <div
-            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
-            <div class="flex flex-1">
-              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
-            </div>
-            <span
-              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
-            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
-          </div>
-
-          <div
-            class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
-            <div class="flex flex-1">
-              <span class="flex-1 text-slate-700 py-2 px-4">عنوان 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md">تاریخ 1</span>
-              <span class="ring-gray-300 flex border py-2 px-4 rounded-md mr-4">دسته بندی 1</span>
-            </div>
-            <span
-              class="w-8 h-8 bg-slate-500 flex items-center justify-center rounded-full ring-gray-100 text-white mr-4 font-extralight">10</span>
-            <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
-          </div>
+        
 
 
         </div>
