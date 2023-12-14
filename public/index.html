@@ -46,11 +46,11 @@
               <div class="my-4">
 
                 <div class="my-4 inline-block w-full">
-                  
+
                   <select id="category__items"
                     class="lg:w-1/2 w-full pl-4 flex items-center whitespace-nowrap bg-slate-400 rounded bg-slate-400  px-3 pb-2 pt-2 text-sm font-medium  leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]  motion-reduce:transition-none ">
-                    <option class ="text-sm  font-medium bg-slate-400 py-2" selected>دسته بندی محصولات</option>
-                 
+                    <option class="text-sm  font-medium bg-slate-400 py-2" selected>دسته بندی محصولات</option>
+
                   </select>
                 </div>
 
@@ -101,44 +101,19 @@
         <div class="flex items-center justify-between mx-4">
           <div class="flex-1 w-full">
             <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white ">جستجو</label>
-            <input type="text" id="first_name"
+            <input type="text" id="product__search"
               class="bg-gray-50 w-3/4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  font-medium block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="صندلی" required>
           </div>
           <div class="my-4 flex-1">
             <label for="product__filter" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">مرتب
               سازی</label>
-            <div class="relative my-2 inline-block">
-              <button id=""
-                class="category__btn flex items-center whitespace-nowrap bg-slate-400 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                type="button" id="dropdownMenuButton1" data-te-dropdown-toggle-ref aria-expanded="false"
-                data-te-ripple-init data-te-ripple-color="light">
-                دسته بندی محصول
-                <span class="ml-2 w-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                    <path fill-rule="evenodd"
-                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </span>
-              </button>
-              <ul
-                class="category__items hidden absolute z-[1000] float-left m-0  mt-1 w-full list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-ri' text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
-                aria-labelledby="dropdownMenuButton1" data-te-dropdown-menu-ref>
-                <li>
-                  <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                    href="#" data-te-dropdown-item-ref>دسته بندی 1</a>
-                </li>
-                <li>
-                  <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                    href="#" data-te-dropdown-item-ref>دسته بندی 2</a>
-                </li>
-                <li>
-                  <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                    href="#" data-te-dropdown-item-ref>دسته بندی 3</a>
-                </li>
-              </ul>
-            </div>
+            <select id="product__filter"
+              class="lg:w-1/2 w-full pl-4 flex items-center whitespace-nowrap bg-slate-400 rounded bg-slate-400  px-3 pb-2 pt-2 text-sm font-medium  leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]  motion-reduce:transition-none ">
+              <option value="1" class="text-sm  font-medium bg-slate-400 py-2" selected>صعودي</option>
+              <option value="2" class="text-sm  font-medium bg-slate-400 py-2">نزولي</option>
+
+            </select>
 
 
 
@@ -158,9 +133,9 @@
             <span class="px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
           </div> -->
 
-         
 
-        
+
+
 
 
         </div>

@@ -3,11 +3,11 @@ import ProductView from "./ProductView.js";
 
 
 
-const categoryBtn = document.querySelector(".category__btn");
-const categoryItems = document.querySelector(".category__items");
-categoryBtn.addEventListener("click", () => {
-    categoryItems.classList.toggle("hidden");
-});
+// const categoryBtn = document.querySelector(".category__btn");
+// const categoryItems = document.querySelector(".category__items");
+// categoryBtn.addEventListener("click", () => {
+//     categoryItems.classList.toggle("hidden");
+// });
 
 
 
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     CategoryView.setCategory();
     CategoryView.createCategoriesList();
     ProductView.setProduct();
-    console.log(ProductView);
-    ProductView.createProductList();
+    // console.log(ProductView);
+    ProductView.createProductList(ProductView.productList);
 });
 
 

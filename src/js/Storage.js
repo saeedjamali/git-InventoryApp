@@ -41,9 +41,9 @@ export default class Storage {
 
     }
 
-    static getAllProducts() {
+    static getAllProducts(sortIndex) { //1 : Incremental  2: Decremental
         const saveProducts = JSON.parse(localStorage.getItem("product")) || [];
-        const sortedProducts = saveProducts.sort((a, b) => { return a.id > b.id ? -1 : 1 });
+        const sortedProducts = sortIndex==1 ? (saveProducts.sort((a, b) => { return a.id < b.id ? -1 : 1 })):(saveProducts.sort((a, b) => { return a.id > b.id ? -1 : 1 }));
         return sortedProducts;
     }
 
@@ -63,6 +63,13 @@ export default class Storage {
         }
         localStorage.setItem("product", JSON.stringify(saveProducts));
 
+
+    }
+
+    static deleteProduct(id) {
+        const allProduct = Storage.getAllProducts();
+        const currectProduct = allProduct.filter((p) => p.id != id);
+        localStorage.setItem("product", JSON.stringify(currectProduct));
 
     }
 }

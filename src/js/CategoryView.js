@@ -13,7 +13,7 @@ const categoryNew = document.querySelector("#category__new");
 class CategoryView {
 
     constructor() {
-        console.log("Hi React");
+        // console.log("Hi React");
         categoryNew.addEventListener("click", (e) => this.addNewCategory(e));
         this.categories = [];
 

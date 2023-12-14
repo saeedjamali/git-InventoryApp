@@ -3,17 +3,21 @@ import CategoryView from "./CategoryView.js";
 
 
 const productAdd = document.querySelector("#product__add");
+const productSearch = document.querySelector("#product__search");
+const productFilter = document.querySelector("#product__filter");
 
 
 
 class ProductView {
     constructor() {
         productAdd.addEventListener("click", (e) => this.addProduct(e));
+        productSearch.addEventListener("input", (e) => this.searchProduct(e));
+        productFilter.addEventListener("change", (e) => this.filterProduct(e));
         this.productList = [];
     }
 
     setProduct() {
-        this.productList = Storage.getAllProducts();
+        this.productList = Storage.getAllProducts(1);
 
     }
 
@@ -30,21 +34,21 @@ class ProductView {
         if (!title || !quantity || !categoryId) return
         else {
             Storage.saveProducts({ title, quantity, categoryId });
-            this.productList = Storage.getAllProducts();
-            this.createProductList();
+            this.productList = Storage.getAllProducts(1);
+            this.createProductList(this.productList);
         }
 
     }
 
 
-    createProductList() {
+    createProductList(products) {
         let result = "";
-        console.log(this.productList);
-       
-        this.productList.forEach((p) => {
+        // console.log(this.productList);
+
+        products.forEach((p) => {
             const categoryList = CategoryView.categories;
             const selectedCategory = categoryList.find((c) => c.id == p.categoryId);
-            console.log("SelectedCategory1 : ",selectedCategory);
+            console.log("SelectedCategory1 : ", selectedCategory);
             result += ` <div 
         class="product flex items-center bg-slate-200 justify-between border rounded-md p-2 border-slate-400 mt-2">
         <div class="flex flex-1">
@@ -62,23 +66,44 @@ class ProductView {
 
 
         const productRemove = document.querySelectorAll(".product__remove");
-        const productAll = Storage.getAllProducts();
-        productRemove.forEach((e) => {
-            console.log("hi");
-            e.addEventListener("click", () => {
-                // p.preventDefault();
-                const otherProduct = productAll.filter((p) => p.id != e.dataset.id);
-                console.log("Other Product : ",otherProduct);
-                Storage.saveProducts(otherProduct);
-                // this.createProductList();
-            });
+
+        productRemove.forEach((item) => {
+            // console.log("hi");
+            // console.log(e.dataset);
+            const id = item.dataset.id;
+            item.addEventListener("click", (e) => {
+                // e.preventDefault();
+                Storage.deleteProduct(id);
+                this.productList = Storage.getAllProducts(1);
+                // Storage.saveProducts(otherProduct);
+                this.createProductList(this.productList);
+            })
+
         });
 
 
 
 
     }
+
+
+    searchProduct(e) {
+        let inputSearch = e.target.value.trim();
+        const searchResult = this.productList.filter((p) => p.title.includes(inputSearch));
+        console.log(searchResult);
+        this.createProductList(searchResult);
+    }
+
+    filterProduct(e) {
+        let sortIndex = parseInt(e.target.value);
+        this.productList = Storage.getAllProducts(sortIndex);
+        this.createProductList(this.productList);
+
+
+    }
+
 }
+
 
 
 
