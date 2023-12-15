@@ -13,6 +13,7 @@ import ProductView from "./ProductView.js";
 
 const productNew = document.querySelector(".product__new");
 const productForm = document.querySelector(".product__form");
+
 productNew.addEventListener("click", () => {
     productForm.classList.toggle("hidden");
 });
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ProductView.setProduct();
     // console.log(ProductView);
     ProductView.createProductList(ProductView.productList);
+   
 });
 
 

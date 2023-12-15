@@ -38,6 +38,8 @@ class ProductView {
             this.createProductList(this.productList);
         }
 
+
+
     }
 
 
@@ -61,6 +63,9 @@ class ProductView {
         <span data-id=${p.id} class="product__remove px-4 py-2 bg-red-400 ring-red-900 rounded-md mr-4 text-red-950 cursor-pointer ">حذف</span>
       </div>`
         });
+
+
+
         const productList = document.querySelector("#product__list");
         productList.innerHTML = result;
 
@@ -80,7 +85,8 @@ class ProductView {
             })
 
         });
-
+        const counter = document.querySelector("#counter");
+        counter.innerHTML = "موجود  در سبد : " + products.length;
 
 
 
